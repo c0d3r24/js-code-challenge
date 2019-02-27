@@ -1,0 +1,24 @@
+.modal-style {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.delete-confirmation-modal-style {
+  background:#fff;
+  margin-top: 200px;
+  border: 1px solid #ddd;
+  width: 300px;
+  border-radius: 2px;
+}
+.button-style {
+  font-size: 12px;
+  background-color: #6176ff;
+  margin: 10px;
+  width: 100px;
+}

@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col s12 m12 l12">
+    <div class="card card-style">
+      <div class="card-content card-content-style">
+        <span class="card-title">{{employee.lastName}}, {{employee.firstName}}</span>
+        <p>Employee Id: {{employee.id}}</p>
+        <p>Number of reporting employees: {{totalReportingEmployees}}</p>
+        <div *ngIf="employee.directReports && employee.directReports.length">
+          <hr>
+          <ul class="collection with-header" style="color: #000; border-radius: 2px ">
+            <li class="collection-header" style="border-radius: 2px"><h6>Direct Employees List:</h6></li>
+            <li class="collection-item"  *ngFor="let dr of directReportingEmployees">
+              <div>
+                {{dr.firstName}} {{dr.lastName}}, {{dr.position}}
+                <button (click)="handleDeleteClick(dr.id)" title="Delete this user" class="secondary-content button-style">
+                  <i class="material-icons icon-style">delete</i>
+                </button>
+                <button (click)="handleEditClick(dr.id)" title="Edit this user" class="secondary-content button-style">
+                    <i class="material-icons icon-style">edit</i>
+                </button>
+              </div>
+            </li>
+          </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

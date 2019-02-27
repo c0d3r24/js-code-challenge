@@ -1,0 +1,44 @@
+<div id="modal1" class="row modal-style">
+    <div *ngIf="showDeleteConfirmation" class="delete-confirmation-modal-style col offset-l3 offset-m3 offset-s2 s8 l6 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Delete Confirmation</span>
+              <p>Permanently Delete Employee {{employee.firstName}} {{employee.lastName}}</p>
+            </div>
+            <div class="card-action center">
+              <button (click)="handleDeleteResponse(true)"  class="waves-effect waves-light btn button-style">Delete</button>
+              <button (click)="handleDeleteResponse(false)" class="waves-effect waves-light btn button-style">Cancel</button>
+            </div>
+          </div>
+    </div>
+    <div class="delete-confirmation-modal-style col offset-l3 offset-m3 offset-s2 s8 l6 m6" *ngIf="showEditDialog">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">{{employee.firstName}} {{employee.lastName}}</span>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input placeholder="firstName" id="first_name" type="text" name="firstName" [(ngModel)]="employee.firstName"  class="validate">
+                  <label class="active" for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="last_name" type="text" [(ngModel)]="employee.lastName" name="lastName" class="validate">
+                    <label class="active" for="last_name">Last Name</label>
+                </div>
+                <div class="input-field col s12">
+                      <input id="title" type="text" [(ngModel)]="employee.position" name="title"class="validate">
+                      <label class="active" for="title">Title</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="compensation" type="text" [(ngModel)]="employee.compensation" name="compensation"  required class="validate">
+                    <label class="active" for="compensation">Compensation <span style="color:red">*</span></label>
+                </div>
+
+              </div>
+              <div class="card-action center">
+                  <button (click)="handleEditResponse(true)" class="waves-effect waves-light btn button-style">Save</button>
+                  <button  (click)="handleEditResponse(false)" class="waves-effect waves-light btn button-style">Cancel</button>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>

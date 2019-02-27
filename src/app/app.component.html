@@ -1,0 +1,12 @@
+<nav style="background:#9CA9FF; font-family: 'Nanum Gothic', sans-serif;">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Mindex Coding Challenge</a>
+  </div>
+</nav>
+<app-employee-list (closeModal)="closeModal()" (showModal)="showMainModal($event)"></app-employee-list>
+<app-modal
+  *ngIf="showModal"
+  [dialogToShow]="dialogToShow"
+  [employee]="employee"
+  (closeModalResponse)="closeModal()"
+></app-modal>

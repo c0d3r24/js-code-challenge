@@ -1,0 +1,15 @@
+.button-style {
+ border: none;
+ background: none;
+ cursor: pointer;
+}
+.card-style {
+  background-color: #fff;
+}
+.card-content-style {
+  color: #000
+}
+.icon-style {
+  color: #6176ff;
+}
+
